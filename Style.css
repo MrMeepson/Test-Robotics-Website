@@ -1,6 +1,7 @@
 :root {
     --background: #000000EE;
     --tgreen: #3AB549;
+    --transitionLimit: 1500px;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 #background-image {
-    opacity: 0.2;
+    opacity: 0.15;
     height: 70%;
     position: fixed;
     top: 10%;
@@ -259,6 +260,14 @@ footer table tr td {
     margin: 0;
 }
 
+.FooterMessage {
+    font-size: 0.65em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 /* Footer Styles End */
 
 /* Content Styles Start */
@@ -335,6 +344,23 @@ button:active {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+}
+
+.sponsor-box p {
+    margin: 0;
+    padding: 0.2em 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    color: var(--tgreen);
+    width: 280px;
+    font-size: 1.5em;
+    font-family: "Michroma";
+    font-weight: 500;
+    text-align: center;
+    font-style: italic;
 }
 
 .sponsor-box span {
@@ -414,7 +440,7 @@ button:active {
 
 .category-link-container {
     display: flex;
-    width: 95%;
+    width: 95vw;
     max-width: 95%;
     min-width: 1500px;
     margin: auto;
@@ -489,7 +515,7 @@ button:active {
     top: 0;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
     .category-link-container{
         display: none;
     }
@@ -754,6 +780,47 @@ button:active {
     font-family: "Michroma";
     font-size: 2em;
     text-align: center;
+    width: 100%;
+}
+
+.ProgramContainer:nth-of-type(n+2) .ProgramHeader {
+    margin-top: 2em;
+}
+
+.ProgramContainer:nth-of-type(n+2) .ProgramHeader::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: calc(100% - 2em);
+    height: 2px;
+    background: black;
+    transform: translate(-50%, -0.5em);
+}
+
+.ProgramDescription h1 {
+    margin-bottom: -1em;
+    margin-top: 1.5em;
+    font-weight: 500;
+}
+
+.ProgramDescription h2 {
+    margin-top: 1em;
+    margin-bottom: 0;
+    font-weight: 200;
+}
+
+.ProgramDescription p {
+    margin-top: 0;
+}
+
+.ProgramDescription a {
+    font-weight: 700;
+    color: #000;
+}
+
+.ProgramDescription ul {
+    margin: -1em;
+    padding-top: 0;
 }
 
 /* End Program Styles */

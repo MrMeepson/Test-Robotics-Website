@@ -442,14 +442,13 @@ button:active {
     display: flex;
     width: 95vw;
     max-width: 95%;
-    min-width: 1500px;
     margin: auto;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .category-link {
-    width: 28vw;
+    width: calc(30%);
     height: 15.75vw;
     position: relative;
     margin: auto;
@@ -517,7 +516,6 @@ button:active {
 
 @media screen and (max-width: 1500px) {
     .category-link-container{
-        display: none;
     }
 }
 

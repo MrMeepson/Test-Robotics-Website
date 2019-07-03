@@ -448,8 +448,8 @@ button:active {
 }
 
 .category-link {
-    width: calc(30%);
-    height: 15.75vw;
+    width: 30vw;
+    height: calc(9 / 16 * 30vw);
     position: relative;
     margin: auto;
     margin-bottom: 2em;
@@ -514,8 +514,9 @@ button:active {
     top: 0;
 }
 
-@media screen and (max-width: 1500px) {
-    .category-link-container{
+@media screen and (max-width: 1350px) {
+    .category-link-name{
+        font-size: 1em;
     }
 }
 

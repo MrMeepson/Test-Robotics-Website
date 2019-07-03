@@ -658,17 +658,20 @@ button:active {
     width: calc(100% - 4em);
     height: 2px;
     background: black;
-    transform: translateY(-2em);
+    transform: translateY(-1em);
 }
 
 .robot-image {
-    height: 200px;
-    width: 300px;
+    width: calc(500px - 5vw);
     overflow: hidden;
 }
 
 .robot-image img {
-    width: 100%;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .robot-description {
@@ -724,21 +727,21 @@ button:active {
 
 /* Team Member Page Styles */
 
-.TeamMemberContainer {
-    padding: 0 2em;
-    margin-bottom: 1em;
-    width: calc(50% - 5em);
-    display: inline-block;
-    position: relative;
+.MemberContainer {
+    margin: auto;
+    text-align: center;
 }
 
-.TeamMemberContainer:nth-of-type(n+3)::before {
-    content: '';
-    position: absolute;
-    width: calc(100% - 4em);
-    height: 2px;
-    background: black;
-    transform: translateY(-0.5em);
+.TeamMemberContainer {
+    text-align: left;
+    background: #000;
+    color: var(--tgreen);
+    padding: 0 0.5em;
+    margin: 0.5em;
+    width: 500px;
+    height: 10em;
+    display: inline-block;
+    clip-path: polygon(0% 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
 }
 
 .TeamMemberName {
@@ -751,20 +754,33 @@ button:active {
     font-weight: 500;
     font-size: 1.25em;
     margin-top: -0.125em;
-}
-
-.TeamMemberRole::before {
-    content: '-';
+    color: whitesmoke;
 }
 
 .TeamMemberInfo {
-    padding-left: 2em;
+    color: whitesmoke;
+    margin-left: 2em;
+    margin-bottom: 0.25em;
+    padding: 0 0.25em;
+    height: 5em;
+    overflow-y: auto;
+    border-top: solid 1px white;
 }
 
 .TeamMemberHeader {
     font-family: "Michroma";
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
+}
+
+.TeamMemberHeader::before {
+    content: '';
+    position: absolute;
+    background: black;
+    height: 2px;
+    width: 95%;
+    left: 50%;
+    transform: translate(-50%, 0.125em)
 }
 
 /* End Team Member Page Styles */

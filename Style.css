@@ -8,7 +8,7 @@ body {
     margin: 0px;
     padding: 0px;
     position: relative;
-    min-width: 700px;
+    min-width: 750px;
     background: whitesmoke;
     font-family: "Hind", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -17,7 +17,7 @@ body {
     opacity: 0.15;
     height: 70%;
     position: fixed;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     z-index: -99;
@@ -85,7 +85,7 @@ body {
 
 header {
     background: var(--background);
-    min-width: 700px;
+    min-width: 750px;
     text-align: center;
     position: fixed;
     z-index: 999;
@@ -355,7 +355,7 @@ button:active {
     transform: translate(-50%, -50%);
     background: #000;
     color: var(--tgreen);
-    width: 280px;
+    width: 282px;
     font-size: 1.5em;
     font-family: "Michroma";
     font-weight: 500;
@@ -729,6 +729,7 @@ button:active {
 .MemberContainer {
     margin: auto;
     text-align: center;
+    width: calc(100% - 2em);
 }
 
 .TeamMemberContainer {

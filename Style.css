@@ -657,7 +657,7 @@ button:active {
     width: calc(100% - 4em);
     height: 2px;
     background: black;
-    transform: translateY(-1em);
+    transform: translateY(calc(-1em - 1px));
 }
 
 .robot-image {
@@ -680,7 +680,7 @@ button:active {
 
 .robot-name {
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .robot-highlights {
@@ -789,6 +789,7 @@ button:active {
 .ProgramContainer {
     padding: 0 2em;
     margin-bottom: 1em;
+    font-size: 1.25em
 }
 
 .ProgramHeader {
@@ -834,9 +835,11 @@ button:active {
 }
 
 .ProgramDescription ul {
-    margin: -1em;
+    margin: 0em -1em 0em 0em;
     padding-top: 0;
 }
+
+
 
 /* End Program Styles */
 

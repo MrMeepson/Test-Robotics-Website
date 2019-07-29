@@ -144,7 +144,7 @@ nav {
     left: 0;
     background: var(--background);
     width: 100%;
-    transform: scale(1, 1);
+    transform: scale(1, 0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
 }
@@ -166,21 +166,21 @@ nav a {
     text-decoration: none;
     font-size: 1.25rem;
     text-transform: uppercase;
-    opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
 }
 
 nav a:hover {
     color: var(--tgreen);
 }
 
-.nav-toggle:not(:checked) ~ nav {
-    transform: scale(1, 0);
+.nav-toggle(:checked) ~ nav {
+    transform: scale(1, 1);
 }
 
-.nav-toggle:not(:checked) ~ nav a {
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
+.nav-toggle(:checked) ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
 }
 
 @media screen and (min-width: 1500px) {
@@ -329,13 +329,12 @@ button:active {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 5px 7px 15px #222222BB, inset 0 0 0 0 #ffffff;
-    transition: background 250ms ease-in, box-shadow 250ms ease-in;
+    box-shadow: 5px 7px 15px #222222BB;
+    transition: all 250ms ease-in;
 }
 
 .sponsor-box:hover {
     background: #BBBBBB;
-    box-shadow: 0 0 0 0 #000000, inset 0 0 20px #777777;
 }
 
 .sponsor-box img {
@@ -364,26 +363,26 @@ button:active {
 }
 
 .sponsor-box span {
+    display: flex;
     position: absolute;
-    padding: 1.5em;
-    padding-bottom: 0.75em;
-    padding-top: 0.25em;
+    padding: 0 1.5em;
     background: #111111DD;
-    min-height: 4em;
-    max-height: calc(150px - 3em);
-    width: calc(250px);
-    margin-left: -1.5em;
-    bottom: 0;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 100;
     color: whitesmoke;
     box-shadow: 0 0 5px 5px #111111DD;
-    opacity: 0;
-    transition: opacity 250ms ease-in;
+    transition: all 350ms ease-in-out;
+    clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%);
+    text-align: center;
+    vertical-align: middle;
 }
 
 .sponsor-box:hover span,
 .sponsor-box:hover a {
-    opacity: 1;
+    clip-path: polygon(0% -20px, 100% -20px, 100% calc(100% + 20px), 0% calc(100% + 20px));
 }
 
 .sponsor-header {

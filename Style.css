@@ -167,18 +167,18 @@ nav a {
     font-size: 1.25rem;
     text-transform: uppercase;
     opacity: 0;
-    transition: opacity 250ms ease-in-out;
+    transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover {
     color: var(--tgreen);
 }
 
-.nav-toggle(:checked) ~ nav {
-    transform: scale(1, 0);
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
 }
 
-.nav-toggle(:checked) ~ nav a {
+.nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
 }

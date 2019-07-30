@@ -1,3 +1,5 @@
+/* This document is an absolute mess so sorry about that */
+
 :root {
     --background: #000000EE;
     --tgreen: #3AB549;
@@ -761,7 +763,7 @@ button:active {
     margin-left: 2em;
     margin-bottom: 0.25em;
     padding: 0 0.25em;
-    height: 5em;
+    height: 5.5em;
     overflow-y: auto;
     border-top: solid 1px white;
 }

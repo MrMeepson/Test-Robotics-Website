@@ -277,30 +277,21 @@ footer table tr td {
 .content {
     padding-top: 7em;
     padding-bottom: 10em;
-}
-
-button {
-    height: 2em;
-    background: #000;
-    font-size: 2em;
-    text-transform: uppercase;
-    padding: -0.25em;
-    color: var(--tgreen);
-    border: 6px solid #000;
-    border-radius: 0.5em;
-    position: relative;
     overflow: hidden;
-    cursor: pointer;
-    transition: color ease-in-out 250ms;
 }
 
-button:hover {
-    color: whitesmoke;
+.p-float-right-img-1 {
+    float: right;
+    height: 10em;
 }
 
-button:active {
-    border: 6px solid #000;
-    background: #333333;
+.p-float-right-img-2 {
+    float: right;
+    height: 12em;
+}
+
+p img {
+    margin: 0.5em;
 }
 
 /* Content Styles End */
@@ -437,7 +428,127 @@ button:active {
 
 /* Sponsor Box Styles End */
 
+/* Main Page Image Banner Styles Start */
+
+.image-banner {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    justify-content: left;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    box-shadow: 0 0 10px 3px;
+}
+
+.image-banner-images {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: left;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    box-shadow: 0 0 10px 3px;
+}
+
+.image-banner-image-wrapper {
+    width: 25%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-banner-image-wrapper:nth-of-type(n+5) {
+    display: none;
+}
+
+.banner-image {
+    width: 100%;
+    object-fit: contain;
+    background: black;
+}
+
+.banner-image-description {
+    position: absolute;
+    width: calc(100% - 10px);
+    max-height: 3em;
+    bottom: 0;
+    font-size: calc(0.5em + 0.8vw);
+    color: whitesmoke;
+    background: #111111DD;
+    padding: 5px;
+    padding-top: 3px;
+    border-right: 1px solid whitesmoke;
+    box-shadow: 0 0 5px 5px #111111DD;
+    text-align: center;
+    text-align: center;
+}
+
+.banner-back-button, .banner-forward-button {
+    position: absolute;
+    top: 50%;
+    height: calc(30px + 3vw);
+    width: calc(30px + 3vw);
+    background: black;
+    z-index: 20;
+    clip-path: polygon(60% 0, 100% 30%, 100% 70%, 60% 100%, 40% 100%, 0 70%, 0 30%, 40% 0);
+    transition: all 250ms ease-in-out;
+}
+
+.banner-back-button {
+    left: 0;
+    transform: translate(-60%, -50%);
+}
+
+.banner-back-button:hover {
+    transform: translate(-50%, -50%);
+}
+
+.banner-forward-button {
+    right: 0;
+    transform: translate(60%, -50%);
+}
+
+.banner-forward-button:hover {
+    transform: translate(50%, -50%);
+}
+
+.banner-back-button::after {
+    content: '';
+    background: var(--tgreen);
+    height: 40%;
+    width: 30%;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+.banner-forward-button::after {
+    content: '';
+    background: var(--tgreen);
+    height: 40%;
+    width: 30%;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* Main Page Image Banner Styles End */
+
 /* Main Page Category Link Styles Start */
+
+.main-header {
+    text-align: center;
+    font-family: 'Michroma';
+}
 
 .category-link-container {
     display: flex;
@@ -766,6 +877,7 @@ button:active {
     height: 5.5em;
     overflow-y: auto;
     border-top: solid 1px white;
+    border-right: solid 1px white;
 }
 
 .TeamMemberHeader {

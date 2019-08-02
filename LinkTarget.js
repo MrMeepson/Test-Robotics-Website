@@ -13,6 +13,12 @@ function LinkTarget() {
             aTags[i].target = '_blank';
         }
     }
+    
+    var imgTags = document.getElementsByTagName("img");
+    
+    for (var j = 0; j < imgTags.length; j++) {
+        imgTags[j].alt = "This image is very broken. Sorry about that.";
+    }
 }
 
 function extractHostname(url) {

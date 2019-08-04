@@ -32,6 +32,11 @@ function calibrateDisplay () {
     for (var i = 0; i < pxSizes.length; i++) {
         if (pageWidth <+ pxSizes[i]) {
             numberOfImagesToDisplay = i + 1;
+            var buttonSize = (240 / numberOfImagesToDisplay) + "px";
+            backButton.style.height = buttonSize;
+            backButton.style.width = buttonSize;
+            forwardButton.style.height = buttonSize;
+            forwardButton.style.width = buttonSize;
             break;
         }
         else {

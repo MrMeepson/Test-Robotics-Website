@@ -90,7 +90,7 @@ header {
     min-width: 750px;
     text-align: center;
     position: fixed;
-    z-index: 999;
+    z-index: 999999; /* <-- how to program */
     width: 100%;
 }
 
@@ -253,7 +253,7 @@ footer {
     padding: 0.5em 1.5em 0 1.5em;
     background: var(--background);
     color: whitesmoke;
-    z-index: 999999;
+    z-index: 9999;
 }
 
 footer table tr td {
@@ -266,6 +266,7 @@ footer table tr td {
     font-size: 0.65em;
     text-align: right;
     position: absolute;
+    padding-right: 2em;
     right: 0;
     bottom: 0;
 }
@@ -479,7 +480,7 @@ p img {
     width: calc(100% - 10px);
     max-height: 3em;
     bottom: 0;
-    font-size: calc(0.5em + 0.8vw);
+    font-size: calc(2.5em - 1.2vw);
     color: whitesmoke;
     background: #111111DD;
     padding: 5px;
@@ -637,16 +638,14 @@ p img {
 /* Google Embedded Items */
 
 #TeamCalendar {
-    margin: 1em;
     position: relative;
     opacity: 1;
     left: 50%;
-    transform: translateX(-50%);
     border: 5px solid #000000;
+    transform: translateX(-50%);
 }
 
 #JoinForm {
-    margin: 1em;
     position: relative;
     opacity: 1;
     left: 50%;

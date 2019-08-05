@@ -1,3 +1,3 @@
 # Test-Robotics-Website
 
-It's not done pls be nice
+It's an absolute catastrophe but it works. Technically.
